@@ -1,0 +1,7 @@
+version: '3.2'
+
+services:
+  memcached:
+    image: bitnami/memcached:1.6.15
+    ports:
+      - '11211:11211'
