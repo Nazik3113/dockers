@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb:10.7.4
+    ports:
+      - 3306:3306
+    volumes:
+      - ./persistence_data/mariadb:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sepersecuremariadbrootpassword
+      MYSQL_PASSWORD: supersecuremariadbpassword
+      MYSQL_USER: sepersecuremariadbuser
+      MYSQL_DATABASE: seper_secure_db
+
